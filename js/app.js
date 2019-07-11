@@ -1,4 +1,3 @@
-const main = (document => {
 
 	function bindEvents (todoItem) {
 	const checkbox = todoItem.querySelector('.checkbox');
@@ -79,16 +78,6 @@ const main = (document => {
 		todoList.removeChild(listItem);
 	}
 
-	function load() {
-		const data = JSON.parse(localStorage.getItem('todos'));
-		return data;
-	}
-
-	function save(data) {
-		const string = JSON.stringify(data);
-		localStorage.setItem('todos', string);	
-	}
-
 	const todoForm = document.getElementById('todo-form');
 	const addInput = document.getElementById('add-input');
 	const todoList = document.getElementById('todo-list');
@@ -99,7 +88,4 @@ const main = (document => {
 		todoItems.forEach(item => bindEvents(item));
 	}
 
-	return main;
-})(document);
-
-main();
+	main();
